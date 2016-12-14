@@ -41,7 +41,7 @@ then
     if [ $usernameStatus != null ]
     then
       # change the specific users password to the hashed password.
-      mysql -u root -Bse "USE $databaseArray; UPDATE users SET pass = $p WHERE name='sds_admin'; SELECT pass FROM users WHERE name='${drupalAdmin}';"
+      mysql -u root -Bse "USE $databaseArray; UPDATE users SET pass = $p WHERE name='${drupalAdmin}'; SELECT pass FROM users WHERE name='${drupalAdmin}';"
     else
       # inform admin that the specific database does not
       echo $databaseArray " does not have a user named " $drupalAdmin
