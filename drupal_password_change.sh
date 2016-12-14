@@ -11,7 +11,7 @@ query="show databases;"
 # check if mysql is running and for how long.
 mysql -u root -e STATUS | grep -i uptime
 
-# Loop and collect the databases on the server.
+# Loop and collect the databases in an array from mysql.
 while read line
 do
   myarray+=($line)
